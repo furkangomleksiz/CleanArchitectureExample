@@ -13,3 +13,6 @@ C:\Users\furka\Documents\ToDoApp\Infrastructure\ToDoApp.Persistence\obj\Debug\ne
 C:\Users\furka\Documents\ToDoApp\Infrastructure\ToDoApp.Persistence\obj\Debug\net8.0\refint\ToDoApp.Persistence.dll
 C:\Users\furka\Documents\ToDoApp\Infrastructure\ToDoApp.Persistence\obj\Debug\net8.0\ToDoApp.Persistence.pdb
 C:\Users\furka\Documents\ToDoApp\Infrastructure\ToDoApp.Persistence\obj\Debug\net8.0\ref\ToDoApp.Persistence.dll
+C:\Users\furka\Documents\ToDoApp\Infrastructure\ToDoApp.Persistence\obj\Debug\net8.0\ToDoApp.Persistence.sourcelink.json
+C:\Users\furka\Documents\ToDoApp\Infrastructure\ToDoApp.Persistence\bin\Debug\net8.0\ToDoApp.Persistence.runtimeconfig.json
+C:\Users\furka\Documents\ToDoApp\Infrastructure\ToDoApp.Persistence\obj\Debug\net8.0\ToDoApp.Persistence.genruntimeconfig.cache

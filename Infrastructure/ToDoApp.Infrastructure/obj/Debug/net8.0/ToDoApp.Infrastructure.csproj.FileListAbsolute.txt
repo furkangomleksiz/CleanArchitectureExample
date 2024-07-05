@@ -13,3 +13,4 @@ C:\Users\furka\Documents\ToDoApp\Infrastructure\ToDoApp.Infrastructure\obj\Debug
 C:\Users\furka\Documents\ToDoApp\Infrastructure\ToDoApp.Infrastructure\obj\Debug\net8.0\refint\ToDoApp.Infrastructure.dll
 C:\Users\furka\Documents\ToDoApp\Infrastructure\ToDoApp.Infrastructure\obj\Debug\net8.0\ToDoApp.Infrastructure.pdb
 C:\Users\furka\Documents\ToDoApp\Infrastructure\ToDoApp.Infrastructure\obj\Debug\net8.0\ref\ToDoApp.Infrastructure.dll
+C:\Users\furka\Documents\ToDoApp\Infrastructure\ToDoApp.Infrastructure\obj\Debug\net8.0\ToDoApp.Infrastructure.sourcelink.json

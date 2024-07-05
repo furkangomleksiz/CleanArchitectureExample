@@ -13,3 +13,4 @@ C:\Users\furka\Documents\ToDoApp\Core\ToDoApp.Application\obj\Debug\net8.0\ToDoA
 C:\Users\furka\Documents\ToDoApp\Core\ToDoApp.Application\obj\Debug\net8.0\refint\ToDoApp.Application.dll
 C:\Users\furka\Documents\ToDoApp\Core\ToDoApp.Application\obj\Debug\net8.0\ToDoApp.Application.pdb
 C:\Users\furka\Documents\ToDoApp\Core\ToDoApp.Application\obj\Debug\net8.0\ref\ToDoApp.Application.dll
+C:\Users\furka\Documents\ToDoApp\Core\ToDoApp.Application\obj\Debug\net8.0\ToDoApp.Application.sourcelink.json

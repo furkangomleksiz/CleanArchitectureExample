@@ -9,3 +9,4 @@ C:\Users\furka\Documents\ToDoApp\Core\ToDoApp.Domain\obj\Debug\net8.0\ToDoApp.Do
 C:\Users\furka\Documents\ToDoApp\Core\ToDoApp.Domain\obj\Debug\net8.0\refint\ToDoApp.Domain.dll
 C:\Users\furka\Documents\ToDoApp\Core\ToDoApp.Domain\obj\Debug\net8.0\ToDoApp.Domain.pdb
 C:\Users\furka\Documents\ToDoApp\Core\ToDoApp.Domain\obj\Debug\net8.0\ref\ToDoApp.Domain.dll
+C:\Users\furka\Documents\ToDoApp\Core\ToDoApp.Domain\obj\Debug\net8.0\ToDoApp.Domain.sourcelink.json
