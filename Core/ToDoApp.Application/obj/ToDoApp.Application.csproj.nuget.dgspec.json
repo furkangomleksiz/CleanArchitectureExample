@@ -53,6 +53,14 @@
             "MediatR": {
               "target": "Package",
               "version": "[12.3.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.0.0-preview1, )"
             }
           },
           "imports": [

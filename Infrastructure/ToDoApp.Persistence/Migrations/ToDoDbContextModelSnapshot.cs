@@ -28,9 +28,53 @@ namespace ToDoApp.Persistence.Migrations
                     b.Property<bool>("IsDone")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("ToDoItems");
+                });
+
+            modelBuilder.Entity("ToDoApp.Domain.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<byte[]>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("BLOB");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("BLOB");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("ToDoApp.Domain.Entities.ToDoItem", b =>
+                {
+                    b.HasOne("ToDoApp.Domain.Entities.User", "User")
+                        .WithMany("ToDoItems")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ToDoApp.Domain.Entities.User", b =>
+                {
+                    b.Navigation("ToDoItems");
                 });
 #pragma warning restore 612, 618
         }

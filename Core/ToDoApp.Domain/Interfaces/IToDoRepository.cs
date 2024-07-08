@@ -8,8 +8,8 @@ namespace ToDoApp.Domain.Interfaces
 {
     public interface IToDoRepository
     {
-        Task<List<ToDoItem>> GetAllAsync();
-        Task<int> CreateAsync(ToDoItem item);
+        Task<int> CreateAsync(int userId, ToDoItem item);
+        Task<List<ToDoItem>> GetAllAsync(int userId);
         // Other methods as needed
     }
 }

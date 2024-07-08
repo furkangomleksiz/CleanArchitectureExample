@@ -9,7 +9,9 @@ namespace ToDoApp.Application.Commands
 
     public class CreateToDoItemCommand : IRequest<int>
     {
-        public required string Description { get; set; }
+        public int UserId { get; set; }
+        public string Description { get; set; }
+        public bool IsDone { get; set; }
     }
 
 }

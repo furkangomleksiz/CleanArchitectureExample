@@ -17,13 +17,15 @@ namespace ToDoApp.Application.Commands
             _toDoRepository = toDoRepository;
         }
 
-        public Task<int> Handle(CreateToDoItemCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(CreateToDoItemCommand request, CancellationToken cancellationToken)
         {
-            var item = new ToDoItem
+            var newItem = new ToDoItem
             {
-                Description = request.Description
+                Description = request.Description,
+                IsDone = request.IsDone
             };
-            return _toDoRepository.CreateAsync(item);
+
+            return await _toDoRepository.CreateAsync(request.UserId, newItem);
         }
     }
 }
