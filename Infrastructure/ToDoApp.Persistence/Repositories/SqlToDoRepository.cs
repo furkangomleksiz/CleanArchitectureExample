@@ -29,9 +29,9 @@ namespace ToDoApp.Persistence.Repositories
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<List<ToDoItem>> GetAllAsync(int userId)
+        public async Task<List<ToDoItem>> GetAllAsync(string username)
         {
-            var user = await _context.Users.Include(u => u.ToDoItems).FirstOrDefaultAsync(u => u.Id == userId);
+            var user = await _context.Users.Include(u => u.ToDoItems).FirstOrDefaultAsync(u => u.Username == username);
             if (user == null)
             {
                 throw new Exception("User not found");

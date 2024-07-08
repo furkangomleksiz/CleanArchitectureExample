@@ -18,7 +18,7 @@ namespace ToDoApp.Application.Queries
 
         public async Task<List<ToDoItem>> Handle(ToDoItemQuery request, CancellationToken cancellationToken)
         {
-            return await _toDoRepository.GetAllAsync(request.UserId);
+            return await _toDoRepository.GetAllAsync(request.Username);
         }
     }
 }

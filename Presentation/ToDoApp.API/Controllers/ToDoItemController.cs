@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using ToDoApp.Application.Commands;
 using ToDoApp.Application.Queries;
@@ -21,18 +22,42 @@ public class ToDoItemController : ControllerBase
     [Authorize]
     public async Task<IActionResult> Get()
     {
-        var userId = int.Parse(User.FindFirst("id").Value); // Assuming the user's ID is stored in the token
-        var result = await _mediator.Send(new ToDoItemQuery { UserId = userId });
-        return Ok(result);
+        var usernameClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+
+        if (usernameClaim != null)
+        {
+            var username = usernameClaim.Value;
+            // Use the username to retrieve ToDo items or perform other operations
+            var result = await _mediator.Send(new ToDoItemQuery { Username = username });
+            return Ok(result);
+        }
+        else
+        {
+            // Handle case where username claim is not found
+            return BadRequest("Username claim not found in token.");
+        }
     }
 
     [HttpPost]
     [Authorize]
     public async Task<IActionResult> Post([FromBody] CreateToDoItemCommand command)
     {
-        var userId = int.Parse(User.FindFirst("id").Value); // Assuming the user's ID is stored in the token
-        command.UserId = userId;
-        var result = await _mediator.Send(command);
-        return CreatedAtAction(nameof(Get), new { id = result }, null);
+        // Retrieve the user's claims from the token
+        var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == "userId");
+
+        if (userIdClaim != null)
+        {
+            var userId = int.Parse(userIdClaim.Value);
+            // Assign userId to the command before sending it to the mediator
+            command.UserId = userId;
+
+            var result = await _mediator.Send(command);
+            return CreatedAtAction(nameof(Get), new { id = result }, null);
+        }
+        else
+        {
+            // Handle case where userId claim is not found
+            return BadRequest("UserId claim not found in token.");
+        }
     }
 }
