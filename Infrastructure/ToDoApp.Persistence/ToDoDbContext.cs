@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using ToDoApp.Domain.Entities;
 
 namespace ToDoApp.Persistence
@@ -7,10 +7,12 @@ namespace ToDoApp.Persistence
     {
         public DbSet<User> Users { get; set; }
         public DbSet<ToDoItem> ToDoItems { get; set; }
+
         public ToDoDbContext(DbContextOptions<ToDoDbContext> options)
-        : base(options)
+            : base(options)
         {
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ToDoApp.Domain.Entities;
 using ToDoApp.Domain.Interfaces;
+using ToDoApp.Persistence;
 
 namespace ToDoApp.Persistence.Repositories
 {

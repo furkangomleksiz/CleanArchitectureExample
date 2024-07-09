@@ -55,7 +55,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddDbContext<ToDoDbContext>(options =>
-        options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQLConnection")));
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ToDoItemQueryHandler).Assembly));
 builder.Services.AddScoped<IToDoRepository, SqlToDoRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
